@@ -23,8 +23,18 @@ public class Aula09Objetos {
 
         // Instânciando uma classe
         Carro carro = new Carro( "Chevrolet", "Celta");
-        carro.andar (60);
+        carro.andar ( 60);
+        carro.parar();
+
+        Carro carro2 = new Carro("Celta", "Chevrolet");
+
+        System.out.println(carro == carro2);
+
+        System.out.println(carro instanceof Carro); // True, é uma instância de Carro
+        System.out.println(carro instanceof Object); // True, é uma instância de Object
+
     }
+
 
     /*
      * Criando uma classe dentro de outra classe
@@ -52,7 +62,11 @@ public class Aula09Objetos {
         // Ações da classe
         void andar(int km) {
             this.quilometragem += km;
-            System.out.println("o carro está percorrendo" + km + "km");
+            System.out.println("o carro está percorrendo " + km + "km");
+        }
+
+        void parar() {
+            System.out.println(" O veículo parou !! e percorreu um total de  " + this.quilometragem + "km");
         }
     }
 
